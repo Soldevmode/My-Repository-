@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>R & B Clean Ride Car Wash</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <div class="nav-container">
+      <h1 class="logo"> R & B Clean Ride</h1>
+
+      <!-- Hamburger Menu for Mobile -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+      <!-- Navigation Links -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#booking">Book Now</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <h2>Your Car Deserves the Best</h2>
+      <p>Book a shine, not just a wash. Clean Ride is your trusted partner for a spotless vehicle inside and out.</p>
+      <a href="#booking" class="btn">Book Now</a>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service"><h3>Exterior Wash</h3><p>Complete exterior cleaning and drying.</p></div>
+        <div class="service"><h3>Interior Cleaning</h3><p>Vacuuming, dashboard wipe, and scent spray.</p></div>
+        <div class="service"><h3>Full Detailing</h3><p>Inside-out polish and deep-clean package.</p></div>
+        <div class="service"><h3>Wax & Polish</h3><p>Protect your shine with long-lasting wax.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section id="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step"><h3>1</h3><p>Choose your service</p></div>
+        <div class="step"><h3>2</h3><p>Pick a time</p></div>
+        <div class="step"><h3>3</h3><p>Drop off your car</p></div>
+        <div class="step"><h3>4</h3><p>Drive away clean</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section id="booking">
+    <div class="container">
+      <h2>Book a Wash</h2>
+      <form class="booking-form">
+        <input type="text" placeholder="Car Model" required />
+        <select required>
+          <option value="">Select a Package</option>
+          <option>Exterior Wash</option>
+          <option>Interior Cleaning</option>
+          <option>Full Detailing</option>
+          <option>Wax & Polish</option>
+        </select>
+        <input type="date" required />
+        <button class="btn" type="submit">Confirm Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="images/car1.jpg" alt="Car 1" class="slide active" />
+        <img src="images/car2.jpg" alt="Car 2" class="slide" />
+        <img src="images/car3.jpg" alt="Car 3" class="slide" />
+        <img src="images/car4.jpg" alt="Car 4" class="slide" />
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials">
+    <div class="container">
+      <h2>Customer Reviews</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <p>"Amazing service! Fast and spotless."</p>
+          <h4>- Emily J.</h4>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="testimonial">
+          <p>"Interior feels brand new every time!"</p>
+          <h4>- Chris D.</h4>
+          <div class="stars">★★★★☆</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- MAP SECTION -->
+  <section id="map">
+    <div class="container">
+      <h2>Visit Us</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.920209420833!2d-73.98715508470592!3d40.75889557932678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855d27072b9%3A0xa0f3e4b8f3b6e9b7!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1616181131876!5m2!1sen!2sus"
+        width="100%" height="450" style="border:0;" allowfullscreen loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Clean Ride Car Wash. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS: Gallery Slideshow -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+    }
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+    setInterval(nextSlide, 5000);
+  </script>
+
+</body>
+</html>
